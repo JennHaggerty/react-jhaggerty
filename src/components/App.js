@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Interactive from 'react-interactive';
 
 import { Switch, BrowserRouter as Router, Route, Link  } from 'react-router-dom';
 //import s from '../styles/app.style';
 
-import {Navbar, Nav, NavItem} from 'react-bootstrap';
+import {Navbar, Nav, NavItem, Jumbotron, Button} from 'react-bootstrap';
 
-import Home from './Home';
 import AboutComponent from './AboutComponent';
 import ResumeComponent from './ResumeComponent';
 import ContactComponent from './ContactComponent';
@@ -35,7 +34,7 @@ export default function App() {
               <Link to="/github" id="NavItem">Github</Link>
             </Nav>
           </Navbar.Collapse>
-            <Route exact path="/" component={Home}/>
+            <Route exact path="/" component={AboutComponent}/>
             <Route path="/about" component={AboutComponent}/>
             <Route path="/resume" component={ResumeComponent}/>
             <Route path="/contact" component={ContactComponent}/>
