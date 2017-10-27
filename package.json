@@ -1,22 +1,5 @@
 {
-<<<<<<< HEAD
   "name": "react-spagithubpages-jhaggerty",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-scripts": "1.0.14"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
-}
-=======
-  "name": "spa-github-pages",
   "version": "5.1.0",
   "private": true,
   "description": "Single Page Apps for GitHub Pages",
@@ -53,4 +36,3 @@
     "webpack-dev-server": "^2.8.2"
   }
 }
->>>>>>> gh-pages

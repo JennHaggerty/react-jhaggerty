@@ -1,45 +1,47 @@
 import React from 'react';
 import Interactive from 'react-interactive';
-import { Switch, Route } from 'react-router-dom';
+
+import { Switch, BrowserRouter as Router, Route, Link  } from 'react-router-dom';
+//import s from '../styles/app.style';
+
+import {Navbar, Nav, NavItem} from 'react-bootstrap';
+
 import Home from './Home';
-import ExampleComponent from './ExampleComponent';
+import AboutComponent from './AboutComponent';
+import ResumeComponent from './ResumeComponent';
+import ContactComponent from './ContactComponent';
 import PageNotFound from './PageNotFound';
-import Breadcrumbs from './Breadcrumbs';
-import s from '../styles/app.style';
 
 export default function App() {
   return (
-    <div style={s.root}>
-      <h1 style={s.title}>Single Page Apps for GitHub Pages</h1>
-      <Interactive
-        as="a"
-        href="https://github.com/rafrex/spa-github-pages"
-        style={s.repoLink}
-        {...s.link}
-      >https://github.com/rafrex/spa-github-pages</Interactive>
-
-      <nav style={s.breadcrumbs}>
-        <Breadcrumbs />
-      </nav>
-
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/example" component={ExampleComponent} />
-        <Route component={PageNotFound} />
+        <Router>
+          <Navbar collapseOnSelect>
+            <Navbar.Header>
+              <Navbar.Brand>
+                <Link to="/" id="NavItem">
+                  JENNIFER HAGGERTY
+                </Link>
+              </Navbar.Brand>
+            <Navbar.Toggle />
+          </Navbar.Header>
+          <Navbar.Collapse id="navButton">
+            <Nav>
+              <Link to="/about" id="NavItem">About</Link>
+              <Link to="/resume" id="NavItem">Resume</Link>
+              <Link to="/contact" id="NavItem">Contact</Link>
+            </Nav>
+            <Nav pullRight>
+              <Link to="/github" id="NavItem">Github</Link>
+            </Nav>
+          </Navbar.Collapse>
+            <Route exact path="/" component={Home}/>
+            <Route path="/about" component={AboutComponent}/>
+            <Route path="/resume" component={ResumeComponent}/>
+            <Route path="/contact" component={ContactComponent}/>
+            <Route path="/github" component={() => window.location = 'https://github.com/jennhaggerty'}/>
+          </Navbar>
+        </Router>
       </Switch>
-
-      <div style={s.creditLine}>
-        <Interactive
-          as="a"
-          href="http://www.rafaelpedicini.com"
-          interactiveChild
-          focus={{}}
-          touchActive={{}}
-          touchActiveTapOnly
-        >
-          Code and concept by <span {...s.childLink}>Rafael Pedicini</span>
-        </Interactive>
-      </div>
-    </div>
   );
 }
