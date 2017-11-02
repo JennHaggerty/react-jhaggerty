@@ -6,4 +6,8 @@ s.pageLinkContainer = {
   margin: '1vh 0',
 };
 
+s.a = {
+  display: 'inline'
+}
+
 export default s;

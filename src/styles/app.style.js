@@ -50,4 +50,8 @@ s.creditLine = {
   marginTop: '50px',
 };
 
+s.navbar = {
+  marginTop: '50px';
+}
+
 export default s;
