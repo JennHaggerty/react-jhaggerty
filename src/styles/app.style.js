@@ -7,7 +7,7 @@ s.root = {
   fontWeight: '300',
   fontSize: '16px',
   letterSpacing: '0.025em',
-  padding: '3vh 0 12vh 0',
+  //padding: '3vh 0 12vh 0',
   width: '500px',
   // use responsive max-width to simulate padding/margin to allow
   // space for vertical scroll bar without creating horizontal scroll bar
@@ -50,8 +50,5 @@ s.creditLine = {
   marginTop: '50px',
 };
 
-s.navbar = {
-  marginTop: '50px';
-}
 
 export default s;

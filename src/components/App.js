@@ -12,8 +12,14 @@ import Header from './Header';
 
 
 export default function App() {
+  const divStyle = {
+    padding: '0px',
+    margin: '0px'
+
+  }
+
   return (
-    <div className="container">
+    <div style={divStyle}>
       <Header />
     </div>
   );
